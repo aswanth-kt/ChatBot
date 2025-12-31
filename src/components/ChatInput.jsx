@@ -9,15 +9,31 @@ function ChatInput(props) {
   };
 
   const messageHandler = () => {
-    props.setChatMessages([
+    const newChatMessages = [
       ...props.chatMessages, 
       {
         id: crypto.randomUUID(),
         message: inputText,
         sender: "user",
       }
-    ]);
+    ]
+    props.setChatMessages(newChatMessages);
+
+    // Clear text values after sendeing.
     setInputText("");
+
+    // Robot responce
+    const robotResponce = Chatbot.getResponse(inputText); // get the external responce
+
+    props.setChatMessages([
+      ...newChatMessages, 
+      {
+        id: crypto.randomUUID(),
+        message: robotResponce,
+        sender: "robot",
+      }
+    ]);
+
   };
 
   return (
