@@ -24,8 +24,13 @@ function App() {
 
   return (
     <>
-      <ChatInput setChatMessages={setChatMessages} chatMessages={chatMessages} />
-      <Message chatMessages={chatMessages} />
+      <ChatInput 
+        chatMessages={chatMessages} 
+        setChatMessages={setChatMessages} 
+      />
+      <Message 
+        chatMessages={chatMessages} 
+      />
     </>
   )
 }
