@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./chatInput.css";
 
 function ChatInput(props) {
 
@@ -37,14 +38,18 @@ function ChatInput(props) {
   };
 
   return (
-    <div>
+    <div className="chat-input-container">
       <input 
         type="text" 
         placeholder="Type your queries..." 
         onChange={saveInputText} 
         value={inputText} 
+        className="chat-input"
       />
-      <button onClick={messageHandler}>Send</button>
+      <button 
+        onClick={messageHandler}
+        className="send-btn"
+      >Send</button>
     </div>
   );
 }
