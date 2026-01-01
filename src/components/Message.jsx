@@ -6,9 +6,9 @@ import "./message.css"
 function Message(props) {
   const chatMessageRef = useRef(null)
   useEffect(() => {
+    // console.log("useEffect:", chatMessageRef.current)
     const messageContainerElem = chatMessageRef.current;
     messageContainerElem.scrollTop = messageContainerElem.scrollHeight;
-    console.log("useEffect:", chatMessageRef.current)
   },[props.chatMessages])
   return (
     <div className="chat-message-container" ref={chatMessageRef}>
@@ -20,13 +20,16 @@ function Message(props) {
               : "chat-message-robot"
             }
             >
-              {chatMessage.sender === "robot" && chatMessage.message !== '' && (
+              {chatMessage.sender === "robot" && (
                 <img src={botLogo} alt="bot" width={55} />
               )}
-
-              <div className="chat-message-text">
-                {chatMessage.message}
-              </div>
+              {
+                chatMessage.message && (
+                  <div className="chat-message-text">
+                    {chatMessage.message}
+                  </div>
+                )
+              }
 
               {chatMessage.sender === "user" && chatMessage.message && (
                 <img src={userLogo} alt="user-lgo" width={35} />

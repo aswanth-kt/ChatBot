@@ -9,32 +9,34 @@ function ChatInput(props) {
     setInputText(event.target.value);
   };
 
-  const messageHandler = () => {
-    const newChatMessages = [
-      ...props.chatMessages, 
-      {
-        id: crypto.randomUUID(),
-        message: inputText,
-        sender: "user",
-      }
-    ]
-    props.setChatMessages(newChatMessages);
+  const messageHandler = (e) => {
+    // console.log("e:", e)
+    if (e.key === "Enter" || e.type === "click") {
+      const newChatMessages = [
+        ...props.chatMessages, 
+        {
+          id: crypto.randomUUID(),
+          message: inputText,
+          sender: "user",
+        }
+      ]
+      props.setChatMessages(newChatMessages);
 
-    // Clear text values after sendeing.
-    setInputText("");
+      // Clear text values after sendeing.
+      setInputText("");
 
-    // Robot responce
-    const robotResponce = Chatbot.getResponse(inputText); // get the external responce
+      // Robot responce
+      const robotResponce = Chatbot.getResponse(inputText); // get the external responce
 
-    props.setChatMessages([
-      ...newChatMessages, 
-      {
-        id: crypto.randomUUID(),
-        message: robotResponce,
-        sender: "robot",
-      }
-    ]);
-
+      props.setChatMessages([
+        ...newChatMessages, 
+        {
+          id: crypto.randomUUID(),
+          message: robotResponce,
+          sender: "robot",
+        }
+      ]);
+    }
   };
 
   return (
@@ -45,6 +47,7 @@ function ChatInput(props) {
         onChange={saveInputText} 
         value={inputText} 
         className="chat-input"
+        onKeyDown={messageHandler}
       />
       <button 
         onClick={messageHandler}
