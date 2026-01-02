@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./chatInput.css";
+import { Chatbot } from "../botFunction/chatbot.js";
 
 function ChatInput(props) {
 

@@ -1,4 +1,4 @@
-const Chatbot = {
+export const Chatbot = {
   defaultResponses: {
     'hello hi': `Hello! How can I help you?`,
     'how are you': `I'm doing great! How can I help you?`,
