@@ -42,6 +42,7 @@ const Chatbot = {
   },
 
   getResponse: function (message) {
+    console.log("trigger the bot responce")
     if (!message) {
       return this.emptyMessageResponse;
     }

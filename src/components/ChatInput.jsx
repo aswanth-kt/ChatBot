@@ -26,7 +26,7 @@ function ChatInput(props) {
       setInputText("");
 
       // Robot responce
-      const robotResponce = Chatbot.getResponse(inputText); // get the external responce
+      const robotResponce = Chatbot.getResponse(inputText); 
 
       props.setChatMessages([
         ...newChatMessages, 
