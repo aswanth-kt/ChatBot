@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./chatInput.css";
 import { Chatbot } from "../botFunction/chatbot.js";
 
@@ -10,7 +10,7 @@ function ChatInput(props) {
     setInputText(event.target.value);
   };
 
-  const messageHandler = (e) => {
+  const messageHandler = async (e) => {
     // console.log("e:", e)
     if (e.key === "Enter" || e.type === "click") {
       const newChatMessages = [
@@ -27,7 +27,7 @@ function ChatInput(props) {
       setInputText("");
 
       // Robot responce
-      const robotResponce = Chatbot.getResponse(inputText); 
+      const robotResponce = await Chatbot.getResponseAsync(inputText); 
 
       props.setChatMessages([
         ...newChatMessages, 
@@ -44,7 +44,7 @@ function ChatInput(props) {
     <div className="chat-input-container">
       <input 
         type="text" 
-        placeholder="Type your queries..." 
+        placeholder="e.g. flip a coin" 
         onChange={saveInputText} 
         value={inputText} 
         className="chat-input"

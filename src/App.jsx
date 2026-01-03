@@ -14,7 +14,7 @@ function App() {
       />
       <ChatInput 
         chatMessages={chatMessages} 
-        setChatMessages={setChatMessages} 
+        setChatMessages={setChatMessages}
       />
     </div>
   )

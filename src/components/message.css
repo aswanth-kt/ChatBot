@@ -23,3 +23,28 @@
     overflow: scroll;
     scrollbar-width: none;
 }
+
+/* .available-command {
+    width: 50%;
+    margin: auto;
+} */
+
+.available-commands {
+    margin-bottom: 12px;
+    color: rgb(118, 118, 118);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.available-commands .line {
+    white-space: pre-wrap;
+}
+
+.available-commands .cmd {
+    color: #00ff9c;
+}
