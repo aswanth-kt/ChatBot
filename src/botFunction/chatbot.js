@@ -1,5 +1,6 @@
 export const Chatbot = {
   defaultResponses: {
+    'help': "Available commands: hello | flip a coin | roll a dice | today's date | thanks",
     'hello hi': `Hello! How can I help you?`,
     'how are you': `I'm doing great! How can I help you?`,
     'flip a coin': function () {

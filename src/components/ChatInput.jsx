@@ -44,7 +44,7 @@ function ChatInput(props) {
     <div className="chat-input-container">
       <input 
         type="text" 
-        placeholder="e.g. flip a coin" 
+        placeholder="Type 'help' for available commands." 
         onChange={saveInputText} 
         value={inputText} 
         className="chat-input"
