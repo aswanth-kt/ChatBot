@@ -7,7 +7,7 @@ The project focuses on understanding core React concepts through a terminal-styl
 
 ## 🌐 Live Demo
 
-👉 **Live Demo:** https://your-live-demo-link-here  
+👉 **Live Demo:** https://zeno-chat-bot.vercel.app  
 
 Try the supported commands directly in the browser.
 
