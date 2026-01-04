@@ -1,16 +1,58 @@
-# React + Vite
+# 🤖 Simple Command Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A command-based chatbot UI built with **React** as part of my learning journey.  
+The project focuses on understanding core React concepts through a terminal-style interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## React Compiler
+👉 **Live Demo:** https://your-live-demo-link-here  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Try the supported commands directly in the browser.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👨‍💻 Project Overview
+
+This project is **not an AI chatbot**.  
+It uses **fixed command matching** to return predefined responses.
+
+### What I worked on:
+- Building reusable React components
+- Managing user input and application state
+- Implementing command-based logic
+- Designing a clean terminal-style UI with CSS
+
+---
+
+## 🛠 Tech Stack
+
+- HTML  
+- CSS  
+- JavaScript  
+- React  
+
+---
+
+## 🚀 Getting Started (Local Setup)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/aswanth-kt/ChatBot.git
+```
+### 2. Navigate to the Project Folder
+```
+cd ChatBot
+```
+### 3. Install Dependencies
+```
+npm install
+```
+### 4. Start the Development Server
+```
+npm run dev
+```
+
+
